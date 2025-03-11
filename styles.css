@@ -69,11 +69,11 @@ body {
   }
   
   button.submit-btn:hover {
-    background-color: #45a049;
+    background-color: #5f45a0;
   }
   
   button:disabled {
-    background-color: #ddd;
+    background-color: #e62b2b;
     cursor: not-allowed;
   }
   
