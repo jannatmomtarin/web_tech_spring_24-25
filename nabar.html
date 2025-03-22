@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar with Side and Top Tabs</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        /* Top Navbar */
+        .navbar-top {
+            position: fixed;
+            top: 0;
+            left: 200px; 
+            width: calc(100% - 200px);
+            background: #007BFF;
+            padding: 15px;
+            text-align: center;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .navbar-top a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        .navbar-top a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 200px;
+            height: 100%;
+            background: #333;
+            padding-top: 60px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            font-size: 16px;
+            display: block;
+            text-align: center;
+        }
+
+        .sidebar a:hover {
+            background: #555;
+        }
+
+        /* Content Section - Centering Welcome Message */
+        .content {
+            margin-left: 200px;
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 50px);
+            text-align: center;
+            flex-direction: column;
+        }
+
+        .content h1 {
+            font-size: 50px;
+            color: #333;
+        }
+
+        .content p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .sidebar {
+                width: 100px;
+            }
+
+            .navbar-top {
+                left: 100px;
+                width: calc(100% - 100px);
+            }
+
+            .content {
+                margin-left: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <a href="#">Menu</a>
+        <a href="#">Settings</a>
+        <a href="#">Grade Report</a>
+        <a href="#">Registration</a>
+        <a href="#">Courses</a>
+        <a href="#">Application</a>
+    </div>
+
+    <!-- Top Navbar -->
+    <div class="navbar-top">
+        <a href="#">Courses</a>
+        <a href="#">Results</a>
+        <a href="#">Registration</a>
+        <a href="#">Grade Report</a>
+        <a href="#">Messages</a>
+    </div>
+
+    <!-- Centered Content Section -->
+    <div class="content">
+        <h1>Welcome</h1>
+        
+    </div>
+
+</body>
+</html>
